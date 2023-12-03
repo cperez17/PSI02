@@ -4,7 +4,7 @@ Python
 
 Pytesseract
 
-Python Imaging Library (PIL)
+Pillow
 
 OpenCV
 
