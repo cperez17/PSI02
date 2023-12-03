@@ -7,9 +7,6 @@ from PIL import Image
 tess.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
 
-#img = Image.open("ej.png")
-#print(tess.image_to_string(img))
-
 #Para pdf2image hay que especificar donde esta poppler si no es linux
 img = convert_from_path("ej.pdf") #Aqui poner donde saca el pdf
 
