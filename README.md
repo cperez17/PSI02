@@ -6,8 +6,8 @@ Pytesseract
 
 Pillow
 
-OpenCV
+Google Tesseract OCR (Es necesario decir donde se ubica en la maquina dentro de ./Tesseract/tesseract.py)
 
-Numpy
+pdf2image
 
-Google Tesseract OCR
+poppler(Es necesario decir donde se ubica en la maquina dentro de ./Tesseract/tesseract.py SI esta en otro sistema que no sea linux, en caso de estarlo lo es necesario indicar)
