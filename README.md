@@ -8,4 +8,6 @@ Pillow
 
 OpenCV
 
+Numpy
+
 Google Tesseract OCR
