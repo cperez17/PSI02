@@ -32,7 +32,7 @@ class ContadorPalabrasApp:
         root.protocol("WM_DELETE_WINDOW", root.destroy)
 
     def seleccionar_archivo(self):
-        self.archivo_seleccionado = filedialog.askopenfilename(filetypes=[("Archivos PDF", "*.pdf"),("Todos los archivos","*.*")])
+        self.archivo_seleccionado = filedialog.askopenfilename(filetypes=[("Archivos PDF", "*.pdf"),("Todos los archivos","*.*")], initialdir= "./Archivos PDF")
         if self.archivo_seleccionado:
             pdf2txt(self.archivo_seleccionado)
             self.btn_procesar["state"] = tk.NORMAL  # Habilitar el botón de procesar
