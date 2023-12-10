@@ -1,7 +1,3 @@
-import sys
-import os
-sys.path.append(os.path.abspath("./Tesseract"))
-from pdfConv import pdf2txt
 import tkinter as tk
 from tkinter import filedialog
 from collections import Counter
@@ -14,7 +10,7 @@ class ContadorPalabrasApp:
         self.archivo_seleccionado = None
 
         # Botón para seleccionar el archivo
-        self.btn_seleccionar = tk.Button(root, text="Seleccionar PDF", command=self.seleccionar_archivo)
+        self.btn_seleccionar = tk.Button(root, text="Seleccionar txt", command=self.seleccionar_archivo)
         self.btn_seleccionar.pack(pady=10)
 
         # Botón para procesar el documento
@@ -32,13 +28,13 @@ class ContadorPalabrasApp:
         root.protocol("WM_DELETE_WINDOW", root.destroy)
 
     def seleccionar_archivo(self):
-        self.archivo_seleccionado = filedialog.askopenfilename(filetypes=[("Archivos PDF", "*.pdf"),("","")])
+        self.archivo_seleccionado = filedialog.askopenfilename(filetypes=[("Archivos de texto", "*.txt")])
         if self.archivo_seleccionado:
-            pdf2txt(self.archivo_seleccionado)
             self.btn_procesar["state"] = tk.NORMAL  # Habilitar el botón de procesar
 
     def procesar_documento(self):
-            with open("./Tesseract/output/output.txt", "r") as file:
+        if self.archivo_seleccionado:
+            with open(self.archivo_seleccionado, "r") as file:
                 contenido = file.read()
                 palabras = contenido.split()
                 contador_palabras = Counter(palabras)
