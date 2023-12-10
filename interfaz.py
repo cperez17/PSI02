@@ -28,6 +28,9 @@ class ContadorPalabrasApp:
         self.resultados_text = tk.Text(root, height=10, width=30)
         self.resultados_text.pack()
 
+        # Asociar el cierre de la ventana con el método destroy
+        root.protocol("WM_DELETE_WINDOW", root.destroy)
+
     def seleccionar_archivo(self):
         self.archivo_seleccionado = filedialog.askopenfilename(filetypes=[("Archivos PDF", "*.pdf"),("","")])
         if self.archivo_seleccionado:
