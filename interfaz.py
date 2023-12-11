@@ -59,6 +59,8 @@ class ContadorPalabrasApp:
             self.resultados_text.insert(tk.END, resultado)
 
 if __name__ == "__main__":
+    app.run()
     root = tk.Tk()
     app = ContadorPalabrasApp(root)
     root.mainloop()
+    
