@@ -4,7 +4,7 @@ from PIL import Image
 
 
 #Donde esta instalado tesseract-ocr en el sistema
-tess.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
+#tess.pytesseract.tesseract_cmd = r"/usr/bin/tesseract"
 
 def pdf2txt(path):
 #Para pdf2image hay que especificar donde esta poppler si no es linux
