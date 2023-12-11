@@ -5,7 +5,12 @@ from pdfConv import pdf2txt
 import tkinter as tk
 from tkinter import filedialog
 from collections import Counter
+from flask import Flask
 
+app = Flask(__name__)
+
+
+@app.route('/')
 class ContadorPalabrasApp:
     def __init__(self, root):
         self.root = root
